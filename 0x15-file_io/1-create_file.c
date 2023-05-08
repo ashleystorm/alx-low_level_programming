@@ -8,7 +8,8 @@
  * Return: 1 if it success. -1 if it fails.
  */
 
-int create_file(const char *filename, char *text_content){
+int create_file(const char *filename, char *text_content)
+{
 	int fd, t, s = 0;
 
 	if (!filename)
@@ -18,7 +19,8 @@ int create_file(const char *filename, char *text_content){
 	if (fd < 0)
 		return (-1);
 
-	if (text_content){
+	if (text_content)
+	{
 		while (text_content[s])
 			s++;
 		t = write(fd, text_content, s);
